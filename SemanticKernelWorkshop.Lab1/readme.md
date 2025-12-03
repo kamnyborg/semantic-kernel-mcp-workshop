@@ -1,12 +1,47 @@
-# Semantic Kernel Workshop - Lab 1
+ï»¿# Semantic Kernel Workshop - Lab 1
 
-## Mål: 
-- Forstå oppsett av semantic kernel
-- Forstå hvordan man bruker Semantic Kernel til å snakke med Azure OpenAI LLM
-- Lage prompts and bruke dem
+## Goals:
+- Understand the setup of Semantic Kernel
+- Understand how to use Semantic Kernel to communicate with Azure OpenAI LLM
+- Use prompts and receive responses
 
-## Instruksjoner:
-1. Legg til appsettings
-2. Kjør løsningen
-3. Test med forskjellige prompts
-4. (Valgfritt) Legg til håndtering for historikk
+## Instructions:
+1. Add appsettings
+2. On line 19, add the following:
+
+```csharp
+builder.Services
+    .AddKernel()
+    .AddAzureOpenAIChatCompletion(
+        modelDeploymentName,
+        azureOpenAIEndpoint,
+        azureOpenAIApiKey);
+```
+
+3. On line 26, add the following:
+
+```csharp
+OpenAIPromptExecutionSettings settings = new()
+{
+    MaxTokens = 128
+};
+
+Console.WriteLine($"PROMPT: ã€Š{prompt}ã€‹\n");
+
+var results = await chatCompletionService.GetChatMessageContentsAsync(prompt, settings);
+
+Console.WriteLine();
+
+foreach (var res in results)
+{
+    Console.WriteLine(res);
+}
+
+Console.ReadKey();
+
+4. (Optional) Test with different prompts or agents
+5. (Optional) Add handling for history
+```
+
+
+

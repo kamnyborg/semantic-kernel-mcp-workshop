@@ -16,32 +16,11 @@ var modelDeploymentName = "gpt-4.1";
 var azureOpenAIEndpoint = config.GetValue<string>("AZUREOPENAI_ENDPOINT");
 var azureOpenAIApiKey = config.GetValue<string>("AZUREOPENAI_APIKEY");
 
-builder.Services
-    .AddKernel()
-    .AddAzureOpenAIChatCompletion(
-        modelDeploymentName,
-        azureOpenAIEndpoint,
-        azureOpenAIApiKey);
+// Step 2: Register Semantic Kernel services
 
 var app = builder.Build();
 var chatCompletionService = app.Services.GetRequiredService<IChatCompletionService>();
 
 var prompt = "In a single run-on sentence, introduce a famous programmer.";
 
-OpenAIPromptExecutionSettings settings = new()
-{
-    MaxTokens = 128
-};
-
-Console.WriteLine($"PROMPT: 《{prompt}》\n");
-
-var results = await chatCompletionService.GetChatMessageContentsAsync(prompt, settings);
-
-Console.WriteLine();
-
-foreach (var res in results)
-{
-    Console.WriteLine(res);
-}
-
-Console.ReadKey();
+// Step 3: Add prompt execution
