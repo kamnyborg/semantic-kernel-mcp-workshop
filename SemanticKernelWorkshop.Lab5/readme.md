@@ -1,9 +1,14 @@
 # Semantic Kernel Workshop - Lab 5
 
-## Mål: 
-- Vi setter alt sammen!
+## Goals: 
+- Let's put everything together! Create an MCP client, and use an MCP tool as a plugin in the agent.
 
-Prøv uten plugin først og se hva som skjer.
-Deretter legger du til både DateTimePlugin og MCP klienten fra forrige lab.
-Se hvordan agenten nå kan bruke både dato/tid og hente informasjon fra nettet for å svare på spørsmål.
-Utfordring: Lag et nytt MCP verktøy som henter værdata fra en offentlig API og integrer det i agenten.
+## Instructions:
+1. Launch the project as-is, and see what happens
+2. Go to Program.cs and add the following code on line x:
+```csharp
+kernel.Plugins.AddFromFunctions("UtcTimeTool", tools.Select(aiFunction => aiFunction.AsKernelFunction()));
+```
+Notice how the agent now can fetch the current date and time to answer such questions
+
+3. Challenge: create a new MCP tool that fetches weather data from a public API, and integrate it into the agent

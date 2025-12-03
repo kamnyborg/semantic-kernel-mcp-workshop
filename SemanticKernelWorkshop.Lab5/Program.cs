@@ -40,7 +40,7 @@ var mcpClient = await McpClient.CreateAsync(
 var tools = await mcpClient.ListToolsAsync().ConfigureAwait(false);
 
 // Add the MCP tools as plugins in Semantic Kernel.
-kernel.Plugins.AddFromFunctions("UtcTimeTool", tools.Select(aiFunction => aiFunction.AsKernelFunction()));
+// Step 2: add MCP tools to the kernel
 
 string prompt = "I would like to know what date is it and 5 significant things that happened in the past on this day.";
 

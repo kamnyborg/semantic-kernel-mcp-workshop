@@ -3,6 +3,7 @@
 ## Goals: 
 - Create an MCP client in .NET
 
+## Instructions:
 1. Go to Program.cs and add this code on line 10:
 ```csharp
 var mcpClient = await McpClient.CreateAsync(
