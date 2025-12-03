@@ -25,9 +25,8 @@ var projectRoot = Directory.GetParent(AppContext.BaseDirectory)    // netX.Y
                              ?.Parent                                 // Debug
                              ?.Parent                                 // bin
                              ?.Parent
-                             ?.Parent// <project root>
+                             ?.Parent 
                              ?.FullName;
-
 
 var mcpClient = await McpClient.CreateAsync(
     new StdioClientTransport(new()

@@ -3,18 +3,18 @@
 ## Goals: 
 - Create an MCP client in .NET
 
-1. Go to Program.cs and add this code on line 3:
+1. Go to Program.cs and add this code on line 10:
 ```csharp
 var mcpClient = await McpClient.CreateAsync(
     new StdioClientTransport(new()
     {
         Command = "dotnet run",
-        Arguments = ["--project", "C:\\Users\\kgregertsen\\Repos\\semantic-kernel-workshop\\SemanticKernelWorkshop\\SemanticKernelWorkshop.Lab3"],
+        Arguments = ["--project", projectRoot + "\\SemanticKernelWorkshop.Lab3"],
         Name = "MCP",
     }));
 ```
 
-2. Fetch the tools from the MCP server on line 6:
+2. Fetch the tools from the MCP server on line 13:
 ```csharp
 var tools = await mcpClient.ListToolsAsync().ConfigureAwait(false);
 
