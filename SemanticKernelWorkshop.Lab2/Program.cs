@@ -32,7 +32,7 @@ var app = builder.Build();
 var chatCompletionService = app.Services.GetRequiredService<IChatCompletionService>();
 
 var kernel = app.Services.GetRequiredService<Kernel>();
-// Step 3: add the plugin
+// Step 4: add the plugin
 
 var prompt = "What time is it?";
 
