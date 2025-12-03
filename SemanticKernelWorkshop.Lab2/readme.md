@@ -9,17 +9,8 @@
 2. Run the project and notice that the agent does not know what the current date and time is
 3. Add the implementation for `Plugins/DateTimePlugin.cs`:
 
-    [KernelFunction, Description("Get the local time zone name")]
-    public string TimeZone()
-    {
-        return TimeZoneInfo.Local.DisplayName;
-    }
-
     [KernelFunction, Description("Get the current date and time")]
-    public string DateWithTime()
-    {
-        return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-    }
+    public static string GetCurrentTime() => DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");      
 
 4. Go to `Program.cs` and replace line 35 with:
 

@@ -10,10 +10,7 @@ builder.Logging.AddConsole(consoleLogOptions =>
 });
 
 // Register the MCP server with stdio transport and load tools from the current assembly.
-builder.Services
-    .AddMcpServer()
-    .WithStdioServerTransport()
-    .WithToolsFromAssembly();
+// Step 1: register MCP server
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
@@ -32,11 +29,3 @@ if (app.Environment.IsDevelopment())
 }
 
 app.Run();
-
-// MCP Tool implementation: returns the current UTC time
-[McpServerToolType]
-public static class UtcTimeTool
-{
-    [McpServerTool, Description("Gets the current UTC time.")]
-    public static string GetCurrentTime() => DateTimeOffset.UtcNow.ToString();
-}
