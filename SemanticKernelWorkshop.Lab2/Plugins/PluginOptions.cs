@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SemanticKernelWorkshop.Lab2.Plugins
+﻿namespace SemanticKernelWorkshop.Lab2.Plugins
 {
     public class PluginOptions
     {

@@ -32,24 +32,24 @@ var app = builder.Build();
 var chatCompletionService = app.Services.GetRequiredService<IChatCompletionService>();
 
 var kernel = app.Services.GetRequiredService<Kernel>();
-// Steg 2: legg til plugin her!
+// Step 3: add the plugin
 
-var prompt = "What time is it in Norway right now? My current timezone {{dateTimePlugin.timeZone}} and current date and time is {{dateTimePlugin.dateWithTime}}";
+var prompt = "What time is it?";
 
 OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new()
 {
-    MaxTokens = 250
+    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
 };
 
 Console.WriteLine($"PROMPT: 《{prompt}》\n");
 
-var results = await chatCompletionService.GetChatMessageContentsAsync(prompt, openAIPromptExecutionSettings);
+var result = await chatCompletionService.GetChatMessageContentAsync(
+   prompt,
+   executionSettings: openAIPromptExecutionSettings,
+   kernel: kernel);
 
 Console.WriteLine();
 
-foreach (var res in results)
-{
-    Console.WriteLine(res);
-}
+Console.WriteLine(result);
 
 Console.ReadKey();
