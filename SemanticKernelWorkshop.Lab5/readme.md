@@ -4,8 +4,10 @@
 - Let's put everything together! Create an MCP client, and use an MCP tool as a plugin in the agent.
 
 ## Instructions:
+THIS STEP REQUIRES THAT YOU HAVE COMPLETED LAB 3!
+
 1. Launch the project as-is, and see what happens
-2. Go to Program.cs and add the following code on line x:
+2. Go to Program.cs and add the following code for step 2:
 ```csharp
 kernel.Plugins.AddFromFunctions("UtcTimeTool", tools.Select(aiFunction => aiFunction.AsKernelFunction()));
 ```

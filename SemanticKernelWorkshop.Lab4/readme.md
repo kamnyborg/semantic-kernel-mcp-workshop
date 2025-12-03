@@ -4,7 +4,9 @@
 - Create an MCP client in .NET
 
 ## Instructions:
-1. Go to Program.cs and add this code on line 10:
+THIS STEP REQUIRES THAT YOU HAVE COMPLETED LAB 3!
+
+1. Go to Program.cs and add this code for step 1:
 ```csharp
 var mcpClient = await McpClient.CreateAsync(
     new StdioClientTransport(new()
@@ -15,7 +17,7 @@ var mcpClient = await McpClient.CreateAsync(
     }));
 ```
 
-2. Fetch the tools from the MCP server on line 13:
+2. Go to Program.cs and add this code for step 2:
 ```csharp
 var tools = await mcpClient.ListToolsAsync().ConfigureAwait(false);
 

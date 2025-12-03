@@ -7,7 +7,7 @@
 
 ## Instructions:
 1. Add appsettings
-2. On line 19, add the following:
+2. Go to Program.cs and add the following code to Step 2:
 
 ```csharp
 builder.Services
@@ -18,7 +18,7 @@ builder.Services
         azureOpenAIApiKey);
 ```
 
-3. On line 26, add the following:
+3. Go to Program.cs and add the following code to Step 3:
 
 ```csharp
 OpenAIPromptExecutionSettings settings = new()

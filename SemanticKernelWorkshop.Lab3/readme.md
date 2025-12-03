@@ -4,7 +4,7 @@
 - Create a MCP server in .NET
 
 ## Instructions:
-1. Go to Program.cs and add this code on line 13:
+1. Go to Program.cs and add this code for step 1:
 ```csharp
 builder.Services
     .AddMcpServer()

@@ -12,7 +12,7 @@
     [KernelFunction, Description("Get the current date and time")]
     public static string GetCurrentTime() => DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");      
 
-4. Go to `Program.cs` and replace line 35 with:
+4. Go to `Program.cs` for step 4:
 
     kernel.ImportPluginFromType<DateTimePlugin>("dateTimePlugin");
 
