@@ -4,10 +4,10 @@ Small workshop solution demonstrating using Microsoft Semantic Kernel together w
 
 Project structure (high level)
 - `SemanticKernelWorkshop.Lab1` — how to set up Semantic Kernel with .NET
-- `SemanticKernelWorkshop.Lab2` — Semantic Kernel plugin example (includes `DateTimePlugin.cs`)
-- `SemanticKernelWorkshop.Lab3` — Set up a MCP server
+- `SemanticKernelWorkshop.Lab2` — Semantic Kernel plugin example with a plugin that returns the current date and time
+- `SemanticKernelWorkshop.Lab3` — Set up a MCP server with a MCP tool that returns the current date and time
 - `SemanticKernelWorkshop.Lab4` — Set up a MCP client that connects to the MCP server in the previous example
-- `SemanticKernelWorkshop.Lab5` — Kernel + MCP integrated demo (this repo’s main example)
+- `SemanticKernelWorkshop.Lab5` — Kernel + MCP integrated demo
 
 Prerequisites
 - .NET 9 SDK installed and `dotnet` available on PATH.
