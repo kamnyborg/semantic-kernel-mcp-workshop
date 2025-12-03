@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="SemanticKernelWorkshop.Lab1/SemanticKernelWorkshop.Lab1.csproj" />
+  <Project Path="SemanticKernelWorkshop.Lab2/SemanticKernelWorkshop.Lab2.csproj" />
+  <Project Path="SemanticKernelWorkshop.Lab3/SemanticKernelWorkshop.Lab3.csproj" />
+  <Project Path="SemanticKernelWorkshop.Lab4/SemanticKernelWorkshop.Lab4.csproj" />
+  <Project Path="SemanticKernelWorkshop.Lab5/SemanticKernelWorkshop.Lab5.csproj" Id="ba1ec675-5d37-4228-807b-93bc4fa92396" />
+</Solution>
