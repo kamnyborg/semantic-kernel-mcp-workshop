@@ -38,10 +38,11 @@ foreach (var res in results)
 }
 
 Console.ReadKey();
+```
 
 4. (Optional) Test with different prompts or agents
 5. (Optional) Add handling for history
-```
+
 
 
 
