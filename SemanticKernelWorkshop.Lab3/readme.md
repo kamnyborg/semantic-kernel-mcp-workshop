@@ -19,4 +19,6 @@ public static string GetCurrentTime() => DateTime.Now.ToString("yyyy-MM-dd HH:mm
 ```
 
 3. Navigate to the project folder (for Lab3) in a terminal and run the command to test the MCP server:
+```
 npx @modelcontextprotocol/inspector dotnet run
+```
