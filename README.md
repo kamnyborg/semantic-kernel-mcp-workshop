@@ -13,6 +13,7 @@ Prerequisites
 - .NET 9 SDK installed and `dotnet` available on PATH.
 - Visual Studio 2022 (or later) if you prefer the IDE.
 - An Azure OpenAI deployment that matches the configured model name (default `gpt-4.1`).
+- npx: `npm install -g npx`
 
 Configuration
 - The app reads Azure values from environment variables or `appsettings.json`. Provide:
